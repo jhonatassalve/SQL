@@ -16,9 +16,9 @@ VALUES
 -- Insert table: funcionario 
 INSERT INTO funcionario (nome, rg, cpf, coren, crm, dt_nascimento, sexo, naturalidade, end_logradouro, end_numero, email, telefone, funcao, especialidade)
 VALUES 
-  ('Roberto Fernando Viana', '355471644', '42962933386', NULL, 12345, '1990-01-08', 'M', 'Porto Velho', 'Rua Uruguai', 31, 'roberto-viana85@img.com.br', '+55699991023723', 'Médico', 'Ortopedia e Traumatologia'),
+  ('Roberto Fernando Viana', '355471644', '42962933386', NULL, 12345, '1990-01-08', 'M', 'Porto Velho', 'Rua Uruguai', 31, 'roberto-viana85@img.com.br', '+5569991023723', 'Médico', 'Ortopedia e Traumatologia'),
   ('Samuel Otávio Davi da Paz', '384532950', '90613180330', NULL, 34567, '1992-03-13', 'M', 'Belo Horizonte', 'Rua Nova Jerusalém', 156, 'samuel_otavio_dapaz@profemme.com.br', '+5583938893288', 'Médico', 'Psiquiatria'),
-  ('Leonardo Calebe da Conceição', '357393776', '07417931995', NULL, 56789, '1994-05-07', 'M', 'Uberaba', 'Rua Francisco Meireles', 47, 'leonardo_calebe_daconceicao@corpoclinica.com.br', '+55349999014489', 'Médico', NULL),
+  ('Leonardo Calebe da Conceição', '357393776', '07417931995', NULL, 56789, '1994-05-07', 'M', 'Uberaba', 'Rua Francisco Meireles', 47, 'leonardo_calebe_daconceicao@corpoclinica.com.br', '+5534999014489', 'Médico', NULL),
   ('Flávia Isabela Martins', '403896320', '01773773640', NULL, 90123, '1998-09-10', 'M', 'Lençóis Paulista', 'Rodovia Marechal Rondon', 221, 'elisa.marcela.caldeira@tanby.com.br', '+5514998866045', 'Médico', NULL),
   ('Alice Isabela Assunção', '136110125', '47411235377', 23456, NULL, '1991-02-15', 'F', 'Macapá', 'Travessa Fortunato Peres', 387, 'alice_assuncao@emcinfo.com.br', '+5596939976516', 'Enfermeiro', NULL),
   ('Melissa Débora Novaes', '215970287', '89422568218', 45678, NULL, '1993-04-20', 'F', 'Araguaína', 'Rua Tietê', 44, 'melissa-novaes80@robertacorrea.com', '+5563937829160', 'Enfermeiro', NULL),
