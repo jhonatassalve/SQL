@@ -1,34 +1,6 @@
--- Stored Procedure: ordemColaborador
+-- Stored Procedure: cadastro_paciente
 delimiter $$
-create procedure `ordemColaborador` (
-	in campo char(20),
-    in ordem char(5))
-begin
-	-- ordernar pelo valor de entrada
-	set @ordenarCampo = concat('order by ', campo);
-    
-    -- se ordem for igual a 'asc' então ordene por 'asc'
-    if ordem = 'asc' then
-		set @tipoOrdenacao = concat(@ordenarCampo, ' asc');
-	else
-		-- se não, se ordem for igual a 'desc' ordene por 'desc'
-		if ordem = 'desc' then
-		set @tipoOrdenacao = concat(@ordenarCampo, ' desc');
-        end if;
-	end if;
-    
-    set @retorno = concat('select * from colaboradores ', @tipoOrdenacao);
-    prepare runSQL from @retorno;
-    execute runSQL;
-    deallocate prepare runSQL;
-end $$
-
--- call ordemColaborador('dt_admissao', 'desc');
-
-
--- Stored Procedure: cadastroPaciente
-delimiter $$
-create procedure `cadastroPaciente`(
+create procedure `cadastro_paciente`(
 	in n_cpf varchar(11),
     in nomeCompleto varchar(50),
     in dt_nasc date,
@@ -55,4 +27,33 @@ begin
 	end if;
 end $$
 
+-- teste
 -- call cadastroPaciente('46032125858', 'Jhonatas Germano Lima Salve', '1998-12-15', 'Masculino', 'Brasileira', 'jhonatasgerman@gmail.com', '+5511966191138');
+
+-- Stored Procedure: orderm_colaboradores
+delimiter $$
+create procedure `orderm_colaboradores` (
+	in campo char(20),
+    in ordem char(5))
+begin
+	-- ordernar pelo valor de entrada
+	set @ordenarCampo = concat('order by ', campo);
+    
+    -- se ordem for igual a 'asc' então ordene por 'asc'
+    if ordem = 'asc' then
+		set @tipoOrdenacao = concat(@ordenarCampo, ' asc');
+	else
+		-- se não, se ordem for igual a 'desc' ordene por 'desc'
+		if ordem = 'desc' then
+		set @tipoOrdenacao = concat(@ordenarCampo, ' desc');
+        end if;
+	end if;
+    
+    set @retorno = concat('select * from colaboradores ', @tipoOrdenacao);
+    prepare runSQL from @retorno;
+    execute runSQL;
+    deallocate prepare runSQL;
+end $$
+
+-- teste
+-- call ordemColaborador('dt_admissao', 'desc');
